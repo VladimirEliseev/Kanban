@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Kanban</title>
+</head>
+  <body>
+    <header class='header'>
+      <div class='title'>
+        <object data="image/navicon.svg" type="image/svg+xml" class='navicon'></object>
+        <span class='name'>Awecome Kanban Board</span>
+      </div>
+      <div class='userBlock'>
+          <button class='addButton' tabindex="1">create new list</button>
+          <div class='logo'>
+            <object data="image/user-menu.svg" type="image/svg+xml" class='logoUser'></object>
+            <button class='arrow' tabindex="2"></button>
+          </div>
+      </div>
+    </header>
+    <main class='main'>
+      <div class='board'>
+        <div class='headerBoard'> 
+          <span>Backlog</span>
+          <button class='menu' tabindex="3">&middot;&middot;&middot;</button>
+        </div>
+        <div class='tasks'>
+          <ul class='task'></ul>
+        </div>
+        <button class='addList' tabindex="4">+ Add card</button>
+      </div>
+      <div class='board'>
+        <div class='headerBoard'>
+          <span>Ready</span>
+          <button class='menu' tabindex="5">&middot;&middot;&middot;</button>
+        </div>
+        <div class='tasks'> 
+          <ul class='task'></ul>
+        </div>
+        <button class='addList' tabindex="6">+ Add card</button>
+      </div>
+      <div class='board'>
+        <div class='headerBoard'>
+          <span>In Progress</span>
+          <button class='menu' tabindex="7">&middot;&middot;&middot;</button>
+        </div>
+        <div class='tasks'> 
+          <ul class='task'></ul>
+        </div>
+        <button class='addList' tabindex="8">+ Add card</button>
+      </div>
+      <div class='board'>
+        <div class='headerBoard'> 
+          <span>Finished</span>
+          <button class='menu' tabindex="9">&middot;&middot;&middot;</button>
+        </div>
+        <div class='tasks'> 
+          <ul class='task'></ul>
+        </div>
+        <button class='addList' tabindex="10">+ Add card</button>
+      </div>
+      <div class='additionalBoard'>
+        <input class="titleBoard"></input>
+        <textarea class="textBoard"></textarea>
+        <button class='closeBtn'></button>
+      </div>
+    </main>
+    <footer class='footer'>
+        <span class='activeTask'>Active tasks: &lt;N&gt;</span>
+        <span class='finishedTask'>Finished tasks: &lt;M&gt;</span>
+        <span class='personalName'>Kanban Board &lt;Владимир Елисеев&gt;,&lt;2020&gt;</span>
+    </footer>
+    <script src='script.js'></script>
+  </body>
+</html>
