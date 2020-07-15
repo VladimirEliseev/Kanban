@@ -29,7 +29,7 @@ function loadContent(){
     main[0].insertAdjacentHTML("afterBegin", storageTasks);
   }
 }
-console.log(JSON.parse(localStorage.getItem('additionTasks')));
+
 loadContent();
 createObjectTask();
 buttonAddTasks=document.getElementsByClassName('addList');
@@ -61,8 +61,7 @@ function createObjectTask(){
         buttonAddTasks[i+1].style.color='#3b3737';
       }    
       for(let j=0;j<currentBoard.length;j++){
-        currentTasks[currentTasks.length]=currentBoard[j].innerHTML;
-        
+        currentTasks[currentTasks.length]=currentBoard[j].innerHTML;  
         currentAdditionTasks[currentTasks.length-1]='';
       }
       arrayTasks[arrayTasks.length]=currentTasks;
@@ -103,7 +102,7 @@ function showTasksList(){
   blockPersonalInfo.append(blockDropDown);
   blockDropDown.append(document.createElement('button'));
   blockDropDown.append(document.createElement('button'));
-   let arrayList=blockDropDown.children;
+  let arrayList=blockDropDown.children;
   arrayList[0].innerHTML='Profile';
   arrayList[1].innerHTML='Log out';
 }
@@ -167,8 +166,7 @@ function saveNewList(){
     }
     let count=3;
     for(let i=0;i<buttonAddTasks.length;i++){
-      buttonAddTasks[i].tabIndex= count;
-      console.log(buttonAddTasks[i].tabIndex);
+      buttonAddTasks[i].tabIndex=count;
       count++;
       taskMenu[i].tabIndex=count;
       count++;
@@ -324,7 +322,6 @@ function addNewTask(){
             select.appendChild(defaultOption);
             defaultOption.innerHTML='Выберите задачу';
             defaultOption.disabled='disabled';
-            console.log(arrayTasks[i-1].length);
             for(let j=0;j<arrayTasks[i-1].length;j++){
               finishedTasksIndex[j]=document.createElement('option');
               finishedTasksIndex[j].className='option';
