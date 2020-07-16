@@ -129,6 +129,32 @@ button:hover{
   border:0;
   border-radius: 5px;
 }
+.dropDownBoard{
+  position: absolute;
+  background-color: #0067A3;
+  height: 30px;
+  width: 120px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border:2px solid #111861;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 103, 163, 0.8); 
+}
+.dropDownBoard > button{
+  margin-top:5px;
+  margin-left: 10px;
+  display: block;
+  font-size: 16px;
+  height: 20px;
+  width:100px;
+  background-color: white;
+  color:black;
+  border:0;
+  border-radius: 5px;
+}
+.dropDownBoard > button:hover{
+  background-color: lightblue;
+}
 .dropDown::before{
   content: ''; 
   position: absolute; 
@@ -304,6 +330,10 @@ button:hover{
   font-size:18px;
   color:#3b3737;
   margin-left: 12px;
+  border-radius: 5px;
+}
+.addList:hover{
+  background-color: lightblue;
 }
 .footer{
   z-index: 1;
@@ -357,10 +387,6 @@ button:hover{
     margin-top: 20px;
     max-height: 300px;
   }
-  /* .closeBtn{
-    top:70px;
-    right:6vh;
-  } */
   .footer{
     flex-wrap: wrap;
     padding: 0;
